@@ -64,8 +64,8 @@ class Screen2Fragment : Fragment() {
     }
 
     private fun isFormValidated(): Boolean {
-        return binding.etFirstname.text.isNotEmpty() && binding.etEmail.text.isNotEmpty()
-                && binding.etLastname.text.isNotEmpty() && binding.etPhone.text.isNotEmpty()
+        return binding.etFirstname.text.isNotEmpty()
+                && binding.etLastname.text.isNotEmpty()
     }
 
 }
