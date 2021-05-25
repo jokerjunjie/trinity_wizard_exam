@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
+    <data>
+
+        <variable
+            name="userItem"
+            type="com.jayden.twexam.model.UserModel.User" />
+    </data>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical">
 
 
@@ -13,7 +21,7 @@
             android:layout_gravity="center_horizontal"
             android:paddingVertical="10dp"
             android:src="@mipmap/ic_launcher"
-            app:tint="@color/orange"/>
+            app:tint="@color/orange" />
 
 
         <TextView
@@ -45,7 +53,8 @@
                 android:layout_weight="3"
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:nextFocusDown="@id/et_lastname" />
+                android:nextFocusDown="@id/et_lastname"
+                android:text="@{userItem.firstName}" />
 
         </LinearLayout>
 
@@ -68,7 +77,8 @@
                 android:layout_weight="3"
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:nextFocusDown="@id/et_email" />
+                android:nextFocusDown="@id/et_email"
+                android:text="@{userItem.lastName}" />
 
         </LinearLayout>
 
@@ -100,7 +110,8 @@
                 android:layout_weight="3"
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:nextFocusDown="@id/et_phone" />
+                android:nextFocusDown="@id/et_phone"
+                android:text="@{userItem.email}" />
 
         </LinearLayout>
 
@@ -122,7 +133,8 @@
                 android:layout_margin="@dimen/text_margin"
                 android:layout_weight="3"
                 android:imeOptions="actionDone"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@{userItem.phone}" />
 
         </LinearLayout>
     </LinearLayout>

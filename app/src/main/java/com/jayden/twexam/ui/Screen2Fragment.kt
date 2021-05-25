@@ -30,6 +30,7 @@ class Screen2Fragment : Fragment() {
             container,
             false
         )
+        binding.userItem = arguments?.getSerializable("userItem") as UserModel.User?
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
@@ -37,6 +38,7 @@ class Screen2Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 
 
