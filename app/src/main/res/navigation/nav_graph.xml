@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/screen1Fragment">
+
+    <fragment
+        android:id="@+id/screen1Fragment"
+        android:name="com.jayden.twexam.ui.Screen1Fragment"
+        android:label="item_user"
+        tools:layout="@layout/item_user" />
+    <fragment
+        android:id="@+id/screen2Fragment"
+        android:name="com.jayden.twexam.ui.Screen2Fragment"
+        android:label="Screen2Fragment" />
+</navigation>
