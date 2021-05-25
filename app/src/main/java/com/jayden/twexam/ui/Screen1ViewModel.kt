@@ -7,10 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.jayden.twexam.model.UserModel
 import com.jayden.twexam.model.UserModel.User
 import com.jayden.twexam.util.JsonParserUtil
-import java.lang.reflect.Type
 
 
 class Screen1ViewModel : ViewModel() {
@@ -20,31 +18,12 @@ class Screen1ViewModel : ViewModel() {
     var userListData: ArrayList<User> = arrayListOf()
 
     fun getUserList(context: Context) {
-        val jsonVal :String = JsonParserUtil.getJsonDataFromAsset(context, "data.json").toString()
+        val jsonVal: String = JsonParserUtil.getJsonDataFromAsset(context, "data.json").toString()
         Log.i("data", jsonVal)
-
-//        var listType = object:TypeToken<List<User>>() {}.type
-//        val users: List<User> = Gson().fromJson(jsonVal.trim(),listType)
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        userListData.add(User(email = "testing" , firstName = "firstName",id = "1", lastName = "lastName" , phone = "123123"))
-        _userResData.postValue(userListData)
+        var listType = object : TypeToken<List<User>>() {}.type
+        val users: List<User> = Gson().fromJson(jsonVal.trim(), listType)
+        userListData.addAll(users)
+        _userResData.postValue(users)
     }
 
 }
