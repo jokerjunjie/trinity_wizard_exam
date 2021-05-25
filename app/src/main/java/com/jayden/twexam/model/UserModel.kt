@@ -8,13 +8,13 @@ sealed class UserModel {
         @SerializedName("id")
         val id: String = "",
         @SerializedName("firstName")
-        val firstName: String = "",
+        var firstName: String = "",
         @SerializedName("lastName")
-        val lastName: String = "",
+        var lastName: String = "",
 
         @SerializedName("email")
-        val email: String = "",
+        var email: String = "",
         @SerializedName("phone")
-        val phone: String = ""
+        var phone: String = ""
     ): Serializable
 }

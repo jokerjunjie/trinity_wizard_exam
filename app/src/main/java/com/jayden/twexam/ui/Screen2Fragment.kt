@@ -6,6 +6,7 @@ import android.view.*
 import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.jayden.twexam.R
@@ -16,6 +17,7 @@ import com.jayden.twexam.model.UserModel
 class Screen2Fragment : Fragment() {
 
     private lateinit var binding: FragmentScreen2Binding
+    private val viewModel: Screen2ViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,6 +48,14 @@ class Screen2Fragment : Fragment() {
             R.id.menu_save -> {
                 if (isFormValidated()) {
                     //update the previous screen
+                    viewModel.updateUserList(
+                        binding.userItem!!.copy(
+                            firstName = binding.etFirstname.text.toString(),
+                            lastName = binding.etLastname.text.toString(),
+                            phone = binding.etPhone.text.toString(),
+                            email = binding.etEmail.text.toString()
+                        )
+                    )
                     findNavController().popBackStack()
                 } else {
                     val imm =

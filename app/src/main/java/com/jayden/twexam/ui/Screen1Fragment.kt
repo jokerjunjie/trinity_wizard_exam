@@ -46,7 +46,6 @@ class Screen1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getUserList(this.requireContext())
         userListAdapter = UserRecyclerViewAdapter(
             this.requireContext(), object : UserItemClickListener {
                 override fun onUserItemClicked(userItem: UserModel.User) {
@@ -65,5 +64,10 @@ class Screen1Fragment : Fragment() {
         viewModel.userListResData.observe(viewLifecycleOwner, Observer{
             userListAdapter.submitList(viewModel.userListData)
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getUserList(this.requireContext())
     }
 }
