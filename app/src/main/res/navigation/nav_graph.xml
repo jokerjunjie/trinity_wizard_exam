@@ -9,7 +9,11 @@
         android:id="@+id/screen1Fragment"
         android:name="com.jayden.twexam.ui.Screen1Fragment"
         android:label="item_user"
-        tools:layout="@layout/item_user" />
+        tools:layout="@layout/item_user" >
+        <action
+            android:id="@+id/action_screen1Fragment_to_screen2Fragment"
+            app:destination="@id/screen2Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/screen2Fragment"
         android:name="com.jayden.twexam.ui.Screen2Fragment"

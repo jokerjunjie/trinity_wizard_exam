@@ -1,17 +1,19 @@
 package com.jayden.twexam.model
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
 sealed class UserModel {
     data class User(
-        val email: String,
-        val firstName: String,
-        val id: String,
-        val lastName: String,
-        val phone: String
-    )
-
-    data class Userlist(
-        val userList: ArrayList<User> = arrayListOf()
-    )
-
-
+        @SerializedName("email")
+        val email: String = "",
+        @SerializedName("firstName")
+        val firstName: String = "",
+        @SerializedName("id")
+        val id: String = "",
+        @SerializedName("lastName")
+        val lastName: String = "",
+        @SerializedName("phone")
+        val phone: String = ""
+    ): Serializable
 }
