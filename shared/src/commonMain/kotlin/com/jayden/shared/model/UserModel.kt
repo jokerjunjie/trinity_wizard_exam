@@ -1,20 +1,21 @@
-package com.jayden.twexam.model
+package com.jayden.shared.model
 
-import com.google.gson.annotations.SerializedName
+
+import kotlinx.serialization.SerialName
 import java.io.Serializable
 
 sealed class UserModel {
     data class User(
-        @SerializedName("id")
+        @SerialName("id")
         val id: String = "",
-        @SerializedName("firstName")
+        @SerialName("firstName")
         var firstName: String = "",
-        @SerializedName("lastName")
+        @SerialName("lastName")
         var lastName: String = "",
 
-        @SerializedName("email")
+        @SerialName("email")
         var email: String = "",
-        @SerializedName("phone")
+        @SerialName("phone")
         var phone: String = ""
     ): Serializable
 }

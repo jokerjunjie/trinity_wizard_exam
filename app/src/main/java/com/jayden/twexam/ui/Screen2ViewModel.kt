@@ -3,7 +3,7 @@ package com.jayden.twexam.ui
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.jayden.twexam.model.UserModel
+import com.jayden.shared.model.UserModel
 import com.jayden.twexam.util.SharePreferenceUtil
 
 class Screen2ViewModel : ViewModel() {

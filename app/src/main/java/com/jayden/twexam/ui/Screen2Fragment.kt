@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.jayden.twexam.R
 import com.jayden.twexam.databinding.FragmentScreen2Binding
-import com.jayden.twexam.model.UserModel
+import com.jayden.shared.model.UserModel
 
 
 class Screen2Fragment : Fragment() {

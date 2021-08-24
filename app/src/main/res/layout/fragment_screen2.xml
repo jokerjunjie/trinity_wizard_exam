@@ -5,7 +5,7 @@
 
         <variable
             name="userItem"
-            type="com.jayden.twexam.model.UserModel.User" />
+            type="com.jayden.shared.model.UserModel.User" />
     </data>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"

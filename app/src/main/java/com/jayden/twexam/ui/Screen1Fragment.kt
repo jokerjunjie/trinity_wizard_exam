@@ -1,6 +1,5 @@
 package com.jayden.twexam.ui
 
-import android.nfc.tech.MifareUltralight
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -12,12 +11,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.jayden.shared.Greeting
 import com.jayden.twexam.R
 import com.jayden.twexam.databinding.FragmentScreen1Binding
-import com.jayden.twexam.model.UserModel
+import com.jayden.shared.model.UserModel
 
 /**
  * A fragment representing a list of Items.

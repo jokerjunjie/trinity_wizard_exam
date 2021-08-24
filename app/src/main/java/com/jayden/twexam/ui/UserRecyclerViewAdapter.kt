@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.jayden.twexam.databinding.ItemUserBinding
-import com.jayden.twexam.model.UserModel
+import com.jayden.shared.model.UserModel
 
 
 class UserRecyclerViewAdapter(

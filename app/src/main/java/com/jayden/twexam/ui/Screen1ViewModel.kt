@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.jayden.twexam.model.UserModel.User
+import com.jayden.shared.model.UserModel.User
 import com.jayden.twexam.util.JsonParserUtil
 import com.jayden.twexam.util.SharePreferenceUtil
 
