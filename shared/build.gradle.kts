@@ -4,7 +4,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
-    kotlin("plugin.serialization")
+    id("kotlinx-serialization")
 }
 
 version = "1.0"
@@ -28,31 +28,46 @@ kotlin {
     }
     
     sourceSets {
-        val ktorVersion = "1.6.0"
+        val ktorVersion = "1.5.4"
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
+                // Ktor
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.2.1")
+
+                // Serialization
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.1.0")
+//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
-                implementation("io.ktor:ktor-client-serialization:$ktorVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.2.1")
+//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.2.1")
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies{
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+                implementation("io.ktor:ktor-client-android:$ktorVersion")
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+            }
+        }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13.2")
             }
         }
-        val iosMain by getting
+        val iosMain by getting {
+            dependencies{
+//                implementation ("io.ktor:ktor-client-logging-native:$ktorVersion")
+            }
+        }
         val iosTest by getting
     }
 }

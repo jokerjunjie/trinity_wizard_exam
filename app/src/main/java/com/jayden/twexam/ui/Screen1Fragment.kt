@@ -46,6 +46,7 @@ class Screen1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.i("Screen1Fragment", "Hello from shared module: " + (Greeting().greeting()))
+        viewModel.getGithubMembers()
         userListAdapter = UserRecyclerViewAdapter(
             this.requireContext(), object : UserItemClickListener {
                 override fun onUserItemClicked(userItem: UserModel.User) {
