@@ -2,6 +2,7 @@ package com.jayden.twexam.ui
 
 import android.nfc.tech.MifareUltralight
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jayden.shared.Greeting
 import com.jayden.twexam.R
 import com.jayden.twexam.databinding.FragmentScreen1Binding
 import com.jayden.twexam.model.UserModel
@@ -46,6 +48,7 @@ class Screen1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.i("Screen1Fragment", "Hello from shared module: " + (Greeting().greeting()))
         userListAdapter = UserRecyclerViewAdapter(
             this.requireContext(), object : UserItemClickListener {
                 override fun onUserItemClicked(userItem: UserModel.User) {
