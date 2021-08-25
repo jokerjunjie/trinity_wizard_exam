@@ -11,9 +11,8 @@ import shared
 class ViewModel: ObservableObject {
   @Published var members = [MemberModel]()
   @Published var isError = false
-  
-//    private let repository: MembersRepo
-    private let network :NetworkApi
+
+   private let network :NetworkApi
   
   init(network: NetworkApi) {
     self.network = network

@@ -12,6 +12,7 @@ import com.jayden.shared.model.UserModel.User
 import com.jayden.shared.repo.MembersRepo
 import com.jayden.twexam.util.JsonParserUtil
 import com.jayden.twexam.util.SharePreferenceUtil
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
@@ -34,7 +35,7 @@ class Screen1ViewModel() : ViewModel() {
             JsonParserUtil.getJsonDataFromAsset(context, "data.json").toString()
         }
         Log.i("data", jsonVal)
-        var listType = object : TypeToken<List<User>>() {}.type
+        val listType = object : TypeToken<List<User>>() {}.type
         val users: List<User> = Gson().fromJson(jsonVal.trim(), listType)
         SharePreferenceUtil.userList = jsonVal
         userListData.clear()
