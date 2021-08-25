@@ -11,10 +11,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.jayden.shared.Greeting
 import com.jayden.twexam.R
 import com.jayden.twexam.databinding.FragmentScreen1Binding
 import com.jayden.shared.model.UserModel
+import java.io.Serializable
 
 /**
  * A fragment representing a list of Items.
@@ -50,9 +53,11 @@ class Screen1Fragment : Fragment() {
         userListAdapter = UserRecyclerViewAdapter(
             this.requireContext(), object : UserItemClickListener {
                 override fun onUserItemClicked(userItem: UserModel.User) {
+                    var listType = object : TypeToken<UserModel.User>() {}.type
+
                     findNavController().navigate(
                         R.id.action_screen1Fragment_to_screen2Fragment,
-                        bundleOf("userItem" to userItem)
+                        bundleOf("userItem" to Gson().toJson(userItem, listType))
                     )
                 }
             }

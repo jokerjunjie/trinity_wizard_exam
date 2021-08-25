@@ -2,9 +2,11 @@ package com.jayden.shared.model
 
 
 import kotlinx.serialization.SerialName
-import java.io.Serializable
+import kotlinx.serialization.Serializable
 
 sealed class UserModel {
+
+    @Serializable
     data class User(
         @SerialName("id")
         val id: String = "",
@@ -17,5 +19,5 @@ sealed class UserModel {
         var email: String = "",
         @SerialName("phone")
         var phone: String = ""
-    ): Serializable
+    )
 }

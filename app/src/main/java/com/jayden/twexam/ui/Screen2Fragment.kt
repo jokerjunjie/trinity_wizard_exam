@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.jayden.twexam.R
 import com.jayden.twexam.databinding.FragmentScreen2Binding
 import com.jayden.shared.model.UserModel
@@ -31,7 +33,10 @@ class Screen2Fragment : Fragment() {
             container,
             false
         )
-        binding.userItem = arguments?.getSerializable("userItem") as UserModel.User?
+
+        var listType = object : TypeToken<UserModel.User>() {}.type
+        val user : UserModel.User = Gson().fromJson(arguments?.getString("userItem"), listType)
+        binding.userItem =  user
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
