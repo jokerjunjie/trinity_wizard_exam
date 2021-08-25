@@ -15,6 +15,9 @@
 		54A0CC4426D5DB320008833F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A0CC4226D5DB320008833F /* LaunchScreen.storyboard */; };
 		54A0CC4F26D5DB320008833F /* twexamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC4E26D5DB320008833F /* twexamTests.swift */; };
 		54A0CC5A26D5DB320008833F /* twexamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC5926D5DB320008833F /* twexamUITests.swift */; };
+		54A0CC6926D618F90008833F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6826D618F90008833F /* ViewModel.swift */; };
+		54A0CC6C26D620AC0008833F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6A26D620AC0008833F /* TableViewCell.swift */; };
+		54A0CC6D26D620AC0008833F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A0CC6B26D620AC0008833F /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		54A0CC5526D5DB320008833F /* twexamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twexamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A0CC5926D5DB320008833F /* twexamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twexamUITests.swift; sourceTree = "<group>"; };
 		54A0CC5B26D5DB320008833F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54A0CC6826D618F90008833F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		54A0CC6A26D620AC0008833F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = tablecell/TableViewCell.swift; sourceTree = "<group>"; };
+		54A0CC6B26D620AC0008833F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TableViewCell.xib; path = tablecell/TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				54A0CC4026D5DB320008833F /* Assets.xcassets */,
 				54A0CC4226D5DB320008833F /* LaunchScreen.storyboard */,
 				54A0CC4526D5DB320008833F /* Info.plist */,
+				54A0CC6826D618F90008833F /* ViewModel.swift */,
+				54A0CC6A26D620AC0008833F /* TableViewCell.swift */,
+				54A0CC6B26D620AC0008833F /* TableViewCell.xib */,
 			);
 			path = twexam;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54A0CC4426D5DB320008833F /* LaunchScreen.storyboard in Resources */,
+				54A0CC6D26D620AC0008833F /* TableViewCell.xib in Resources */,
 				54A0CC4126D5DB320008833F /* Assets.xcassets in Resources */,
 				54A0CC3F26D5DB2E0008833F /* Main.storyboard in Resources */,
 			);
@@ -279,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A0CC6C26D620AC0008833F /* TableViewCell.swift in Sources */,
 				54A0CC3C26D5DB2E0008833F /* ViewController.swift in Sources */,
 				54A0CC3826D5DB2E0008833F /* AppDelegate.swift in Sources */,
+				54A0CC6926D618F90008833F /* ViewModel.swift in Sources */,
 				54A0CC3A26D5DB2E0008833F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

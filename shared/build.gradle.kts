@@ -65,7 +65,7 @@ kotlin {
         }
         val iosMain by getting {
             dependencies{
-//                implementation ("io.ktor:ktor-client-logging-native:$ktorVersion")
+                implementation("io.ktor:ktor-client-ios:$ktorVersion")
             }
         }
         val iosTest by getting
