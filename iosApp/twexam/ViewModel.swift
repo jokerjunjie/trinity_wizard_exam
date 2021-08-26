@@ -19,12 +19,22 @@ class ViewModel: ObservableObject {
   }
   
   func fetch() {
-    network.getMembers(){
-        Result, Error in
-        if Result != nil{
-            print(Result!)
-        } else {
-            print(Error!)
+//    let dispatchGroup = DispatchGroup()
+//
+//    dispatchGroup.enter()
+    //show loading
+    DispatchQueue.main.async {
+        self.network.getMembers(){
+            Result, Error in
+            if Result != nil{
+                print(Result!)
+//                dispatchGroup.leave()
+                //stop loading
+            } else {
+                print(Error!)
+//                dispatchGroup.leave()
+                //stop loading
+            }
         }
     }
   }

@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
+    id("com.android.library")
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("com.android.library")
     id("kotlinx-serialization")
 }
 
@@ -22,8 +22,14 @@ kotlin {
     cocoapods {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
-        ios.deploymentTarget = "14.1"
 //        frameworkName = "shared"
+        ios.deploymentTarget = "14.5"
+//        podfile = project.file("../iosApp/Podfile")
+//        pod("AFNetworking",  "~> 4.0.1")
+//        pod("GoogleMaps")
+//        pod("lottie-ios","~> 3.2.3")
+//        pod("Alamofire", "~> 5.4")
+
         // set path to your ios project podfile, e.g. podfile = project.file("../iosApp/Podfile")
     }
     
@@ -41,6 +47,7 @@ kotlin {
                 // Serialization
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.1.0")
 //                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
             }
         }
         val commonTest by getting {
@@ -52,9 +59,11 @@ kotlin {
         }
         val androidMain by getting {
             dependencies{
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
                 implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+                implementation("com.airbnb.android:lottie:4.1.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5")
             }
         }
         val androidTest by getting {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		54A0CC6926D618F90008833F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6826D618F90008833F /* ViewModel.swift */; };
 		54A0CC6C26D620AC0008833F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6A26D620AC0008833F /* TableViewCell.swift */; };
 		54A0CC6D26D620AC0008833F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A0CC6B26D620AC0008833F /* TableViewCell.xib */; };
+		FF3E02502384009E3C833765 /* Pods_twexam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF4FF77EF238C4E2C158749 /* Pods_twexam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D07988D817BD82D0454B338 /* Pods-twexam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twexam.release.xcconfig"; path = "Target Support Files/Pods-twexam/Pods-twexam.release.xcconfig"; sourceTree = "<group>"; };
+		3EF4FF77EF238C4E2C158749 /* Pods_twexam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twexam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		540DAD9726D7340900ACB579 /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		540DAD9926D739A300ACB579 /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		540DAD9B26D739A800ACB579 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		540DAD9D26D7504C00ACB579 /* shared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shared; path = ../shared; sourceTree = "<group>"; };
 		54A0CC3426D5DB2E0008833F /* twexam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twexam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A0CC3726D5DB2E0008833F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54A0CC3926D5DB2E0008833F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +62,7 @@
 		54A0CC6826D618F90008833F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		54A0CC6A26D620AC0008833F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = tablecell/TableViewCell.swift; sourceTree = "<group>"; };
 		54A0CC6B26D620AC0008833F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TableViewCell.xib; path = tablecell/TableViewCell.xib; sourceTree = "<group>"; };
+		9CC03BA46D139889B71687B2 /* Pods-twexam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twexam.debug.xcconfig"; path = "Target Support Files/Pods-twexam/Pods-twexam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3E02502384009E3C833765 /* Pods_twexam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +98,8 @@
 				54A0CC4D26D5DB320008833F /* twexamTests */,
 				54A0CC5826D5DB320008833F /* twexamUITests */,
 				54A0CC3526D5DB2E0008833F /* Products */,
+				E212B7A19EC349DDBEE22933 /* Pods */,
+				8C0FE3FB6B1B63AB8024E8B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +148,27 @@
 			path = twexamUITests;
 			sourceTree = "<group>";
 		};
+		8C0FE3FB6B1B63AB8024E8B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				540DAD9D26D7504C00ACB579 /* shared */,
+				540DAD9B26D739A800ACB579 /* libAFNetworking.a */,
+				540DAD9926D739A300ACB579 /* liblottie-ios.a */,
+				540DAD9726D7340900ACB579 /* liblottie-ios.a */,
+				3EF4FF77EF238C4E2C158749 /* Pods_twexam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E212B7A19EC349DDBEE22933 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CC03BA46D139889B71687B2 /* Pods-twexam.debug.xcconfig */,
+				1D07988D817BD82D0454B338 /* Pods-twexam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54A0CC5E26D5DB320008833F /* Build configuration list for PBXNativeTarget "twexam" */;
 			buildPhases = (
+				51158B8D69851C313D26A133 /* [CP] Check Pods Manifest.lock */,
 				54A0CC6726D5DD190008833F /* ShellScript */,
 				54A0CC3026D5DB2E0008833F /* Sources */,
 				54A0CC3126D5DB2E0008833F /* Frameworks */,
@@ -265,6 +298,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		51158B8D69851C313D26A133 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-twexam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		54A0CC6726D5DD190008833F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,15 +521,23 @@
 		};
 		54A0CC5F26D5DB320008833F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CC03BA46D139889B71687B2 /* Pods-twexam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = twexam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -490,15 +553,23 @@
 		};
 		54A0CC6026D5DB320008833F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D07988D817BD82D0454B338 /* Pods-twexam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = twexam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
