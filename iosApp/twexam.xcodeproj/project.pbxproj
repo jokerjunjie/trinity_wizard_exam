@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CC9309CA004CBA2CC81E7CD /* Pods_twexam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF4FF77EF238C4E2C158749 /* Pods_twexam.framework */; };
 		54A0CC3826D5DB2E0008833F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC3726D5DB2E0008833F /* AppDelegate.swift */; };
 		54A0CC3A26D5DB2E0008833F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC3926D5DB2E0008833F /* SceneDelegate.swift */; };
 		54A0CC3C26D5DB2E0008833F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC3B26D5DB2E0008833F /* ViewController.swift */; };
@@ -18,7 +19,6 @@
 		54A0CC6926D618F90008833F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6826D618F90008833F /* ViewModel.swift */; };
 		54A0CC6C26D620AC0008833F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6A26D620AC0008833F /* TableViewCell.swift */; };
 		54A0CC6D26D620AC0008833F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A0CC6B26D620AC0008833F /* TableViewCell.xib */; };
-		FF3E02502384009E3C833765 /* Pods_twexam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF4FF77EF238C4E2C158749 /* Pods_twexam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3E02502384009E3C833765 /* Pods_twexam.framework in Frameworks */,
+				3CC9309CA004CBA2CC81E7CD /* Pods_twexam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +543,7 @@
 					"$(inherited)",
 					"-framework",
 					shared,
+					"-lsqlite3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayden.twexam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,6 +576,7 @@
 					"$(inherited)",
 					"-framework",
 					shared,
+					"-lsqlite3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayden.twexam;
 				PRODUCT_NAME = "$(TARGET_NAME)";

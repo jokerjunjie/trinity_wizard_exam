@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.jayden.shared.DatabaseDriverFactory
+import com.jayden.shared.db.Database
 import com.jayden.shared.model.UserModel.User
 import com.jayden.shared.repo.MembersRepo
 import com.jayden.twexam.util.JsonParserUtil
@@ -56,6 +58,16 @@ class Screen1ViewModel() : ViewModel() {
                     Log.d("Screen1Fragment", it.toString())
                 }
         }
+    }
+
+    fun insertValueIntoDb(context: Context){
+        val sharedDb = Database(DatabaseDriverFactory(context = context))
+        sharedDb.insert("testing")
+    }
+
+    fun readFromDb(context: Context){
+        val sharedDb = Database(DatabaseDriverFactory(context = context))
+        Log.i("Database value", sharedDb.getData().toString())
     }
 
 }

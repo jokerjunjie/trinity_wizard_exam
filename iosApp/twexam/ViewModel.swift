@@ -38,4 +38,14 @@ class ViewModel: ObservableObject {
         }
     }
   }
+    
+    func insertToDatabase(){
+        let sharedDb = Database(databaseDriverFactory : DatabaseDriverFactory())
+        sharedDb.insert(it: "testing")
+    }
+    
+    func getFromDatabase(){
+        let sharedDb = Database(databaseDriverFactory : DatabaseDriverFactory())
+        print(sharedDb.getData())
+    }
 }

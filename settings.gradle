@@ -1,6 +1,6 @@
 include ':app'
 rootProject.name = "MyApplication"
 
-enableFeaturePreview("GRADLE_METADATA")
+//enableFeaturePreview("GRADLE_METADATA")
 
 include ':shared'

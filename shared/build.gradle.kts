@@ -5,6 +5,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("kotlinx-serialization")
+    id("com.squareup.sqldelight")
 }
 
 version = "1.0"
@@ -35,6 +36,7 @@ kotlin {
     
     sourceSets {
         val ktorVersion = "1.5.4"
+        val sqlDelightVersion = "1.5.1"
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("test-common"))
@@ -48,7 +50,10 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.1.0")
 //                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+                implementation("com.squareup.sqldelight:runtime:$sqlDelightVersion")
             }
+
+
         }
         val commonTest by getting {
             dependencies {
@@ -64,6 +69,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
                 implementation("com.airbnb.android:lottie:4.1.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5")
+                implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
             }
         }
         val androidTest by getting {
@@ -75,6 +81,7 @@ kotlin {
         val iosMain by getting {
             dependencies{
                 implementation("io.ktor:ktor-client-ios:$ktorVersion")
+                implementation("com.squareup.sqldelight:native-driver:$sqlDelightVersion")
             }
         }
         val iosTest by getting
@@ -88,4 +95,12 @@ android {
         minSdkVersion(21)
         targetSdkVersion(30)
     }
+}
+
+sqldelight {
+    database("MyAppDb") {
+        packageName = "com.jayden.cache"
+        sourceFolders = listOf("sqldelight")
+    }
+    linkSqlite = true
 }
