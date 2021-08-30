@@ -14,10 +14,12 @@ import androidx.navigation.fragment.findNavController
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.jayden.shared.Greeting
+import com.jayden.shared.language.Strings
 import com.jayden.twexam.R
 import com.jayden.twexam.databinding.FragmentScreen1Binding
 import com.jayden.shared.model.UserModel
 import java.io.Serializable
+import kotlin.math.log
 
 /**
  * A fragment representing a list of Items.
@@ -52,6 +54,8 @@ class Screen1Fragment : Fragment() {
         viewModel.getGithubMembers()
 //        viewModel.insertValueIntoDb(requireContext())
 //        viewModel.readFromDb(requireContext())
+        Strings.context = requireContext()
+        Log.i("test language", Strings.get("internet_error"))
         userListAdapter = UserRecyclerViewAdapter(
             this.requireContext(), object : UserItemClickListener {
                 override fun onUserItemClicked(userItem: UserModel.User) {

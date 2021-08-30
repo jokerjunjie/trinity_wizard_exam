@@ -21,7 +21,8 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
+
+        print(NSLocalizedString("internet_error", tableName: "", bundle: Bundle.main, value: "", comment: ""))
 //        self.viewModel.insertToDatabase()
 //        self.viewModel.getFromDatabase()
     }

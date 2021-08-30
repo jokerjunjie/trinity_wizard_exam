@@ -19,6 +19,7 @@
 		54A0CC6926D618F90008833F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6826D618F90008833F /* ViewModel.swift */; };
 		54A0CC6C26D620AC0008833F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0CC6A26D620AC0008833F /* TableViewCell.swift */; };
 		54A0CC6D26D620AC0008833F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A0CC6B26D620AC0008833F /* TableViewCell.xib */; };
+		54CFD22E26DCB73A00788193 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54CFD22D26DCB73A00788193 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		54A0CC6826D618F90008833F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		54A0CC6A26D620AC0008833F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = tablecell/TableViewCell.swift; sourceTree = "<group>"; };
 		54A0CC6B26D620AC0008833F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TableViewCell.xib; path = tablecell/TableViewCell.xib; sourceTree = "<group>"; };
+		54CFD22D26DCB73A00788193 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9CC03BA46D139889B71687B2 /* Pods-twexam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twexam.debug.xcconfig"; path = "Target Support Files/Pods-twexam/Pods-twexam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				54A0CC6826D618F90008833F /* ViewModel.swift */,
 				54A0CC6A26D620AC0008833F /* TableViewCell.swift */,
 				54A0CC6B26D620AC0008833F /* TableViewCell.xib */,
+				54CFD22D26DCB73A00788193 /* Localizable.strings */,
 			);
 			path = twexam;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CFD22E26DCB73A00788193 /* Localizable.strings in Resources */,
 				54A0CC4426D5DB320008833F /* LaunchScreen.storyboard in Resources */,
 				54A0CC6D26D620AC0008833F /* TableViewCell.xib in Resources */,
 				54A0CC4126D5DB320008833F /* Assets.xcassets in Resources */,
