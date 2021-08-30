@@ -1,2 +1,0 @@
-com/jayden/shared/BuildConfig.java
- com.jayden.shared.BuildConfig
